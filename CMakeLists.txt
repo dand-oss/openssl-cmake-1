@@ -27,12 +27,19 @@
 project( openssl )
 cmake_minimum_required( VERSION 3.1.0 )
 
+###############
+# ASI default settings
+list(APPEND CMAKE_MODULE_PATH "$ENV{ASV_CMAKE}")
+include(asv_cmake_defaults)
+asv_cmake_defaults( )
+###############
+
 set(CMAKE_DISABLE_SOURCE_CHANGES ON)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-option(WITH_APPS "Build applications" ON)
+option(WITH_APPS "Build applications" OFF)
 
 # OpenSSL version detection imported from FindOpenSSL.cmake
 
