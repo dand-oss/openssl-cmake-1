@@ -4,7 +4,7 @@
 ```
 git clone https://github.com/openssl/openssl.git
 cd openssl
-git checkout OpenSSL_1_1_1d
+git checkout -t OpenSSL_1_1_1g -b OpenSSL_1_1_1g
 ```
 
 # Import openssl-cmake build system in OpenSSL sources:
